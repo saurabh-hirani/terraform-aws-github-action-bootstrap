@@ -19,7 +19,7 @@ jobs:
 
     - name: Upload artifact
       run: |
-        find ../artifact -type f -iname '*.tgz' | while read file; do aws s3 cp $file s3://test-artifacts; done
+        find artifact -type f -iname '*.tgz' | while read file; do aws s3 cp $file s3://test-artifacts; done
       env:
         AWS_ACCESS_KEY_ID:  ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
