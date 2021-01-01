@@ -4,7 +4,7 @@ name: Create and upload artifact
 on:
   push:
     branches:
-      - master
+      - test1
 
 jobs:
   Terraform:
@@ -14,8 +14,6 @@ jobs:
 
     - name: Checkout Repo
       uses: actions/checkout@v2
-      with:
-        ref: test1
 
     - name: Create artifact
       run: rm -rf artifact ; mkdir -p artifact && cd artifact && tar -czvf artifact.tgz ..
