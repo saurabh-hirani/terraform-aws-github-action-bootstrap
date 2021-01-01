@@ -1,10 +1,9 @@
 name: Create and upload artifact
 
-
 on:
   push:
     branches:
-      - master
+      - test1
 
 jobs:
   Terraform:
